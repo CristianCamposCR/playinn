@@ -1,7 +1,7 @@
 const { query } = require('../../../utils/mysql');
 
 const findAll = async () => {
-    const sql = `SELECT ga.* FROM games ga WHERE status = 1`;
+    const sql = `SELECT ga.* FROM games ga`;
     return await query(sql, []);
 };
 

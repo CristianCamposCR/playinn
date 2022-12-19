@@ -31,5 +31,6 @@ const validatePassword = async (password, hashedPassword) => {
 module.exports = {
     validateError,
     hashPassword,
-    validatePassword
-}
+    validatePassword,
+};
+

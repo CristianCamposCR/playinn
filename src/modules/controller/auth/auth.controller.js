@@ -1,8 +1,8 @@
-const { Respose, Router } = require('express');
+const { Response, Router } = require('express');
 const { validateError } = require('../../../utils/functions');
 const { login } = require('./auth.gateway');
 
-const signin = async (req, res = Respose) => {
+const signin = async (req, res = Response) => {
     try {
         const { email, password } = req.body;
         const token = await login({ email, password });
@@ -19,3 +19,4 @@ authRouter.post(`/`, signin);
 module.exports = {
     authRouter,
 };
+
